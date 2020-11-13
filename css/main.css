@@ -1,0 +1,48 @@
+/* main */
+
+section.main{display: flex; justify-content: center; transition: .4s;}
+/* section.main {display: none;} */
+
+section.main > p.mouse-move {position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); font-size: 14px; letter-spacing: 0.1em; animation: mousemove 1s linear alternate; animation-iteration-count: 4; animation-delay: 3s; opacity: 0;}
+
+div.main-wrap {height: 100vh;}
+div.main-wrap > div.slogan {padding: 90px 30px 0; visibility: hidden; opacity: 0;}
+div.main-wrap > div.slogan p {font-weight: 300; font-size: 16px; line-height: 1.7em;}
+div.main-wrap > div.slogan p:nth-child(2) {font-weight: 500; letter-spacing: 0.1em;}
+
+/* main - overview */
+div.overview {position: absolute; bottom: 0; left: 0; padding: 30px 30px; visibility: hidden; opacity: 0;}
+div.overview > p.overview-title {font-size: 14px; cursor: pointer; letter-spacing: 0.2em; padding: 10px 10px 0 0; }
+div.overview > div.overview-tx {border: 1px solid #999; padding: 10px; position:fixed; top: 0; left: 0;  pointer-events:none; z-index:600; transform: translate(5% ,-115%); }
+div.overview > div.overview-tx > p {font-size: 14px; line-height: 1.7em; color: #fff; letter-spacing: 0.1em; font-weight: 300;}
+div.overview > div.overview-line {border-bottom: 1px solid white; width: 0px; margin-top: 5px; transition: .2s;}
+div.overview:hover > div.overview-line {width: 85px;}
+
+/* main - copyright */
+div.main-wrap > p.copyright {font-size: 13px; color: #555; position: absolute; bottom: 0; left: 50%; transform: translate(-50%); padding-bottom: 50px; visibility: hidden; opacity: 0; }
+
+/* main - center */
+div.center {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+div.center > span.degree {font-family: var(--point-font); font-size: 90px; position: relative; z-index: 9; user-select: none;}
+div.center > div.center-blue {position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%);  width: 231px; height: 220px; clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%); background: linear-gradient(90deg, #4e66f1, #00acf8);}
+div.center > div.center-line {position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); width: 231px; height: 220px; opacity: 0;}
+.c-svg-in{stroke: #fff; fill: transparent;}
+#c-svg { width: 231px; height: 220px;}
+div.center > div.center-line {transform-origin: 50% 55%;}
+
+/* .center-penta-ani {
+    animation: center-rotate 8s linear infinite;
+}
+@keyframes center-rotate {
+    0%{ transform: translate(-50%, -50%) rotate(-0deg);}
+    100%{ transform: translate(-50%, -50%) rotate(360deg);}
+} */
+
+
+
+@keyframes mousemove {
+    0% {opacity: 0;}
+    20% {opacity: 0;}
+    80% {opacity: 0.5;}
+    100% {opacity: 0.5;}
+}

@@ -1,0 +1,87 @@
+/* pentagon shape */
+.penta-hidden {opacity:0;}
+.penta-visible {opacity: 1; transition: .8s;}
+div.shape {position: absolute; width: 100vw; height: 100vh; top: 0; left: 0;}
+div.stg1 {clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); width: 100px; height: 100px; position: absolute; left: 15%; top: 55%; transform: rotate(-10deg); overflow: hidden;}
+div.stg1 > div.stripe {position: absolute; left: 0; width:100%; border-bottom: 1px solid #fff; animation: stripe-down 1s linear infinite;}
+div.stg1 > div.stripe:first-child {top:-12px;}
+div.stg1 > div.stripe:nth-child(2) {top:0px;}
+div.stg1 > div.stripe:nth-child(3) {top:12px;}
+div.stg1 > div.stripe:nth-child(4) {top:24px;}
+div.stg1 > div.stripe:nth-child(5) {top:36px;}
+div.stg1 > div.stripe:nth-child(6) {top:48px;}
+div.stg1 > div.stripe:nth-child(7) {top:60px;}
+div.stg1 > div.stripe:nth-child(8) {top:72px;}
+div.stg1 > div.stripe:nth-child(9) {top:84px;}
+div.stg1 > div.stripe:last-child {top:96px;}
+@keyframes stripe-down {
+    0% {transform: translateY(0);}
+    100% {transform:translateY(12px);}
+}
+
+div.stg2-wrap {position: absolute; left: 88%; top: 42%; transform: rotate(30deg); width: 100px; height: 100px;}
+div.stg2-line {width: 100px; height: 100px; position: absolute; top: -4px; left: -15px;}
+polygon.stg-2 {stroke: #fff; fill:transparent; stroke-width: 0.3px;}
+div.stg2 {overflow: hidden;}
+div.stg2 > div.stg-sep {clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); width: 100px; height: 100px; overflow: hidden;}
+div.stg2 > div.stg-sep > div.stripe {position: absolute; left: 0; width:100%; border-bottom: 1px solid var(--shape-blue); animation: stripe-up 1s linear infinite;}
+div.stg2 > div.stg-sep > div.stripe:first-child {top:0px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(2) {top:10px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(3) {top:20px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(4) {top:30px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(5) {top:40px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(6) {top:50px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(7) {top:60px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(8) {top:70px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(9) {top:80px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(10) {top:90px;}
+div.stg2 > div.stg-sep > div.stripe:nth-child(11) {top:100px;}
+div.stg2 > div.stg-sep > div.stripe:last-child {top:110px;}
+@keyframes stripe-up {
+    0% {transform: translateY(10px);}
+    100% {transform: translateY(0);}
+}
+
+div.s1 {width: 25px; height: 25px; position: absolute; top: 30%; left: 10%; background-color: var(--shape-deep-blue); clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); }
+div.s2 {width: 40px; height: 38px; position: absolute; bottom: 20%; right: 20%; background-color: var(--shape-blue); clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); transform: rotate(80deg);}
+div.s3 {width: 25px; height: 25px; position: absolute; top: 55%; right: 30%; background-color: #fff; clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); transform: rotate(30deg); }
+
+div.s4 {width: 35px; height: 35px; position: absolute; top: 70%; left: 35%; transform: rotate(-10deg);}
+.s4-in {fill:transparent; stroke: var(--shape-blue);}
+div.s5 {width: 25px; height: 25px; position: absolute; top: 35%; right: 35%; transform: rotate(15deg);}
+.s5-in {fill:transparent; stroke:#fff;}
+div.s6 {width: 20px; height: 20px; position: absolute; top: 20%; left: 30%; transform: rotate(-10deg);}
+.s6-in {fill:transparent; stroke: var(--shape-deep-blue);}
+
+.scale1 {animation: scale1 2s linear infinite; animation-direction: alternate;}
+.scale2 {animation: scale2 1.5s ease-in-out infinite; animation-direction: alternate;}
+.rotate {animation: rotate 5s linear infinite;}
+.opacity1 {animation: opacity1 6s linear infinite; animation-direction: alternate;}
+.opacity2 {animation: opacity2 3s linear infinite; animation-direction: alternate;}
+
+
+
+
+
+@keyframes scale1 {
+    0% {transform: rotate(30deg) scale(1);}
+    100% {transform: rotate(30deg) scale(1.3);}
+}
+@keyframes scale2 {
+    0% {transform: rotate(-10deg) scale(1);}
+    100% {transform: rotate(-10deg) scale(1.5);}
+}
+@keyframes rotate {
+    0% {transform: rotate(350deg);}
+    100% {transform: rotate(-10deg);}
+}
+@keyframes opacity1{
+    0% { opacity: 1;}
+    40% { opacity: 0;}
+    70% { opacity: 1;}
+    100% { opacity: 0;}
+}
+@keyframes opacity2{
+    0% { opacity: .8;}
+    100% { opacity: 0;}
+}

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+/* font-family: 'Secular One', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+:root {
+    --black-bg: #1e1e1e;
+    --deep-black-bg: #181a1b;
+    --shape-blue: #00acf8;
+    --shape-deep-blue: #3050d7;
+    --text-blue: #2888f4;
+    --point-font: 'Secular One', sans-serif;
+    --pop-font: 'Poppins', sans-serif;
+    --about-profile-bg: #e8e8e9;
+    --about-division-bg: #eee;
+}
+
+* {box-sizing: border-box; color: #fff; font-family: 'Noto Sans KR', sans-serif;}
+body {width: 100vw; height: 100vh; position: fixed; top: 0;left: 0; overflow: hidden; display: flex; justify-content: center; 
+    /* background-color: var(--black-bg);  */
+    background-color: var(--deep-black-bg); 
+    
+}
+/* section{width: 100vw; height: 100vh; display: flex; justify-content: center; align-content:center; position: fixed; top: 0; left: 0;} */
+section{ width: 100vw; height: 100vh; align-content:center; position: fixed; top: 0; left: 0;}
+.container {max-width: 1600px; width: 100%; position: fixed;}
+
+/* main 일때 분할 영역 */
+.division-area {position: absolute; top: 0; right: 0; width: 50vw; height: 100vh; background-color: var(--black-bg); z-index:-1;}
+/* about 페이지일때 분할 영역 */
+/* .division-area {position: fixed; top: 0; right: 0; width: 65vw; height: 100vh; background-color: var(--about-division-bg); z-index:-1;} */
+/* works 페이지일때 분할 영역 */
+/* .division-area {position: fixed; top: 0; right: 0; width: 0vw; height: 100vh; background-color: var(--about-division-bg); z-index:-1;} */
+
+/* nav - pc*/
+header {display: flex; justify-content: space-between; align-items: center; left: 50%; top: 0; transform: translate(-50%, 0); padding: 35px 30px; z-index: 99; visibility: hidden; opacity: 0;}
+header > h1 {font-size: 25px; font-weight: bold; font-family: var(--point-font); z-index:3;}
+header > h1 > a {white-space:nowrap;}
+header > nav.pc > ul {display:flex; align-items: center;}
+header > nav.pc > ul > li {display:flex; align-items: center; cursor: pointer; font-size: 14px; font-weight: 700; letter-spacing: .2em; margin-right: 30px;}
+header > nav.pc > ul > li:last-child{margin:0;}
+
+
+/* contact popup */
+div.ct-popup {background-color: #fff; border-radius: 4px;  z-index: 9; position: fixed; top: 50vh; right: 2vw; left: 2vw; bottom: 50vh; overflow:hidden; z-index:  999; display: flex; justify-content: center; align-items: center; overflow:hidden;}
+div.ct-bg {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgb(247, 247, 255); clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%); z-index: -1;}
+div.ct-close {position: absolute; top: 40px; right: 40px; cursor: pointer;}
+div.ct-close div {width: 25px; height: 4px; background-color: #000;border-radius:2px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+div.ct-close div:first-child {transform: translate(-50%,-50%) rotate(0deg);}
+div.ct-close div:last-child {transform: translate(-50%,-50%) rotate(0deg);}
+
+div.ct-content {text-align: center;}
+div.ct-content h2{color: #000; font-size: 30px; font-weight: 500; font-family: var(--pop-font); margin-bottom: 20px;}
+div.email {position: relative; cursor: pointer; margin-bottom: 30px;}
+div.email > div.email-con{  z-index: 2; transition: .5s ease;}
+div.email > div.email-con > a {color: #000; font-size: 6vw; font-family: var(--point-font);}
+div.email > div.underline { height: 5px; width: 0; background-color: var(--shape-deep-blue); position: absolute; bottom: 10px; left: 0; transition: .3s ease;}
+div.email:hover > div.email-con {transform:translateY(-5px); color: var(--shape-deep-blue);}
+div.email:hover > div.email-con > a { color: var(--shape-deep-blue);}
+div.email:hover > div.underline { width: 100%;}
+div.email-back {position: absolute; top: 0; left: 50%; transform: translateX(-50%); color:rgb(211, 211, 223); font-size: 6vw; font-family: var(--point-font); z-index: -1;}
+div.etc-info {display:flex; justify-content: center; }
+div.number, div.area {color: #000; font-weight: 200; font-family: var(--pop-font);}
+div.number {margin-right: 30px;}
+
+div.social {display: flex; flex-direction: column; align-items: center; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);}
+div.social h3 {color: #000; font-size: 14px; font-weight: 600; font-family: var(--pop-font); margin-bottom: 20px;}
+div.social ul {display: flex;}
+div.social ul li {margin: 0 20px; font-weight: 400; color: #000;}
+
+/* cursor */
+.cursor-circle, .cursor-dot{ position: absolute; top: 0; left: 0; transform: translate(-50%, -50%); pointer-events: none; display: none; z-index: 999;  border-radius: 100%;}
+/* .cursor-circle { width: 40px; height: 40px; border: 1px solid #fff;} */
+.cursor-dot { width: 5px; height: 5px; background-color: var(--shape-blue);}
+
+.cursor-dot { width: 25px; height: 25px; background-color: #00000050; border-radius: 100%; border: 2px solid #fff;}
+/* html {cursor:none;} */
