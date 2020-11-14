@@ -17,11 +17,12 @@
     --about-division-bg: #eee;
 }
 
-* {box-sizing: border-box; color: #fff; font-family: 'Noto Sans KR', sans-serif;}
+* {box-sizing: border-box; color: #fff; font-family: 'Noto Sans', sans-serif;}
+p, a, li {font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;}
+
 body {width: 100vw; height: 100vh; position: fixed; top: 0;left: 0; overflow: hidden; display: flex; justify-content: center; 
     /* background-color: var(--black-bg);  */
     background-color: var(--deep-black-bg); 
-    
 }
 /* section{width: 100vw; height: 100vh; display: flex; justify-content: center; align-content:center; position: fixed; top: 0; left: 0;} */
 section{ width: 100vw; height: 100vh; align-content:center; position: fixed; top: 0; left: 0;}
