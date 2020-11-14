@@ -44,6 +44,7 @@ function aboutClick(){
     if(body.clientWidth < 1024){
         divisionArea.style.width = '100vw';
         headerLogo.style.color = '#000';
+        leftArea.style.marginLeft = 0 + 'px';
         resumeBtn.style.left = '4%';
     }
 
