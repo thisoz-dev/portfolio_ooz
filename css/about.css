@@ -29,7 +29,7 @@ div.check {top: 42px; }
 button.resume:hover div.download { top: -42px;}
 button.resume:hover div.check { top: 0px;}
 
-div.about-wrap { display: flex; justify-content: flex-end; position: relative;}
+div.about-wrap {height: 100vh; width: 100vw; display: flex; justify-content: flex-end; position: relative; }
 div.right-area {width: 65%; height:fit-content; padding-left: 4%;}
 /* div.right-area {width: 65vw; overflow-y: scroll; height: 100vh; padding: 0 8vw;} */
 
