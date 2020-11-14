@@ -142,7 +142,7 @@ div.m-discEls > ul.lang {width: 100%; display: flex; justify-content: space-betw
 
     /* about */
     div.about-wrap { position: relative; flex-direction: column-reverse;}
-    div.left-area {position: relative; width: 100%; margin: 0 0 150px; padding: 0 4vw;}
+    div.left-area {position: relative; width: 100%; padding: 0 4vw 150px;}
     div.left-area > h2{margin: 0 0 60px; color: #000;}
     div.left-area h4 {color: #000;}
     div.left-area p {color: #000;}
