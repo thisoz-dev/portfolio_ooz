@@ -46,10 +46,10 @@ div.slide-mask img {position: absolute; top: 50%; left: 50%; transform: translat
 
 
 div.thumb > div.img-slide > img {width: 100%; user-select: none; pointer-events: none;}
-div.index {height: 150px;position: absolute; top: -5%; left: 0; transform: translate(-30%, -30%); width: fit-content; z-index: 9;mix-blend-mode: difference; overflow:hidden;}
+div.index {height: 170px;position: absolute; top: -5%; left: 0; transform: translate(-30%, -30%); width: fit-content; z-index: 9;mix-blend-mode: difference; overflow:hidden;}
 /* div.index > span {position: absolute; bottom: 10px; left: 20px; } */
 div.index > ul {width:200px; margin-right: 20px; position: relative; }
-div.index > ul li {font-size: 170px; font-weight: 300; line-height: 1em;}
+div.index > ul li {font-size: 170px; font-weight: 100; line-height: 1em; font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;}
 div.index > ul li:nth-child(2) {position: absolute; top: 100%;}
 div.index > ul li:nth-child(3) {position: absolute; top: 200%;}
 div.index > ul li:nth-child(4) {position: absolute; top: 300%;}

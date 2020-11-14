@@ -18,7 +18,7 @@
 }
 
 * {box-sizing: border-box; color: #fff; font-family: 'Noto Sans', sans-serif;}
-p, a, li {font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;}
+p, a, li, h1, h2, h3, h4, h5, h6 {font-family: 'Noto Sans KR', 'Noto Sans', sans-serif;}
 
 body {width: 100vw; height: 100vh; position: fixed; top: 0;left: 0; overflow: hidden; display: flex; justify-content: center; 
     /* background-color: var(--black-bg);  */
