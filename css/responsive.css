@@ -4,11 +4,11 @@ header > div.hamburger > div {width: 100%; height: 4px; border-radius: 2px; back
 header > div.hamburger > div:first-child {top: 0;}
 header > div.hamburger > div:nth-child(2){top: 50%;}
 header > div.hamburger > div:last-child {top: 100%;}
-nav.mobile { position: absolute; top: -100%; left: 0; width: 100%; height: 0; padding: 35px 30px; background-color: var(--deep-black-bg); transition: .3s ease; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;}
+nav.mobile { position: absolute; top: -100%; left: 0; width: 100%; height: 0; padding: 35px 30px 0; background-color: var(--deep-black-bg); transition: .3s ease; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;}
 nav.mobile > ul {margin-top: 15vh;}
 nav.mobile > ul > li {font-size: 50px; font-weight: 700; font-family: var(--point-font); cursor: pointer; color: #fff; margin: 20px 0;}
 nav.mobile > ul > li > sup {font-size: small; vertical-align: top; line-height: 2; font-weight: 400; padding-left: 5px;}
-div.m-contact {display: flex; flex-direction: column; }
+div.m-contact {display: flex; flex-direction: column; margin-bottom: 30px;}
 div.m-contact > h3 {font-size: 20px; font-weight: 700; font-family: var(--point-font); line-height: 1.3em; margin-bottom: 10px;}
 div.m-contact > a{font-size:30px; font-weight: 200; line-height: 1.3em; }
 div.m-contact > a > sup{ font-size: small; font-weight: 700; vertical-align: top; margin-right: 10px; color: var(--shape-blue); line-height: 2;}
@@ -226,4 +226,6 @@ div.m-discEls > ul.lang {width: 100%; display: flex; justify-content: space-betw
     div.mobile-list > ul > li {margin-bottom: 15px;}
     div.m-discEls > h4 {font-size: 25px;}
     div.m-discEls > h4 > br.br-block {display: block;}
+    div.discript-wrap {margin-bottom: 100px;}
+    div.discript {margin-bottom: 0;}
 }
