@@ -3,12 +3,14 @@ section.about::-webkit-scrollbar { display: none;}
 /* section.about{display: none;} */
 
 div.about-wrap {position: relative;}
-div.left-area {position: fixed; top: 0; left: 0; width: 35%; height: 100%; padding: 0 4vw 0 30px; pointer-events: none;}
+div.left-area {position: fixed; top: 0; left: 0; width: 35%; height: 100%; padding-left: 30px; pointer-events: none;}
 div.left-area > h2 {font-size: 35px; margin: 130px 0 60px; font-weight: 200;}
 ul.skill li {margin-bottom: 20px; padding:0 10px; display: flex; justify-content: space-between; border-bottom: 1px solid rgb(48, 48, 48);}
 ul.skill li p { line-height: 1.7em; margin: 3px 0 30px; font-weight: 200; text-align: right;}
 div.sk-title {width: 32px; height: 32px; margin: 0 20px 20px 0; display: flex; align-items: center;}
 div.sk-title img{height: 32px; margin-right: 20px;}
+ul.otherLis svg {width: 32px; height: 32px;}
+path.st0{fill:#FFFFFF;}
 div.sk-title h4 {font-family: var(--point-font); font-size: 20px;}
 
 div.other-skill {display:flex; justify-content: space-between;  margin: 60px 0 20px; padding: 0 10px;}
@@ -17,7 +19,7 @@ ul.otherLis {height: 32px; display:flex; flex-wrap: wrap;}
 ul.otherLis li {width: 32px;  margin-left: 10px;}
 ul.otherLis li img {width: 100%;}
 
-button.resume {background-color: var(--shape-deep-blue); border:0; width: 160px; height: 50px; border-radius: 25px; padding:4px; display: flex; align-items: center; font-size: 15px; font-weight: lighter; letter-spacing: 0.2em; cursor: pointer; outline-style: none; margin-top: 100px; pointer-events: auto;
+button.resume {background-color: var(--shape-deep-blue); border:0; width: 160px; height: 50px; border-radius: 25px; padding:4px; display: flex; align-items: center; font-size: 15px; font-weight: lighter; letter-spacing: 0.2em; cursor: pointer; outline-style: none; pointer-events: auto;
     position: fixed; bottom: 60px; left: 4%;
 }
 div.circle {background-color: #fff; width: 42px; height: 42px; border-radius: 100%; margin-right: 15px; position: relative; overflow: hidden;}
@@ -28,7 +30,7 @@ button.resume:hover div.download { top: -42px;}
 button.resume:hover div.check { top: 0px;}
 
 div.about-wrap { display: flex; justify-content: flex-end; position: relative;}
-div.right-area {width: 65%; padding-left: 4%;}
+div.right-area {width: 65%; height:fit-content; padding-left: 4%;}
 /* div.right-area {width: 65vw; overflow-y: scroll; height: 100vh; padding: 0 8vw;} */
 
 div.like-content {margin: 130px 0 150px; padding-right: 30px;}

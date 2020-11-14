@@ -1,4 +1,53 @@
 'use strict';
+
+const logo = document.querySelector('header');
+const leftArea = document.querySelector('div.left-area');
+const AboutDivisionArea = document.querySelector('.division-area');
+const resumeBtn = document.querySelector('button.resume');
+let logoLeft;
+let logoWidth;
+let LeftAreaRight;
+console.clear();
+
+let isAboutOpen = false;
+
+
+if(body.clientWidth >= 1024){
+    window.addEventListener('load', ()=>{
+        logoLeft = logo.getBoundingClientRect().x;
+        leftArea.style.marginLeft = logoLeft + 'px';
+        resumeBtn.style.marginLeft = logoLeft + 'px';
+        logoWidth = logo.getBoundingClientRect().width;
+        leftArea.style.width = logoWidth * (35 / 100) + "px";
+        // LeftAreaRight = leftArea.getBoundingClientRect().right;
+        // AboutDivisionArea.style.width = window.innerWidth - (LeftAreaRight + 30) + 'px';
+    })
+}
+    window.addEventListener('resize', () => {
+        console.log(isAboutOpen);
+        if(isAboutOpen === true && body.clientWidth >= 1024 ){
+            logoLeft = logo.getBoundingClientRect().x;
+            leftArea.style.marginLeft = logoLeft + 'px';
+            resumeBtn.style.left = logoLeft + 30 + 'px';
+            logoWidth = logo.getBoundingClientRect().width;
+            leftArea.style.width = logoWidth * (35 / 100) + "px";
+            headerLogo.style.color = '#fff';
+        
+        
+            LeftAreaRight = leftArea.getBoundingClientRect().right;
+            AboutDivisionArea.style.width = window.innerWidth - (LeftAreaRight + 30) + 'px';
+            
+        }
+        if (isAboutOpen === true && body.clientWidth < 1024 ){
+            leftArea.style.width = "100%";
+            AboutDivisionArea.style.width = '100vw';
+            headerLogo.style.color = '#000';
+            resumeBtn.style.left = '4%';
+        }
+    });
+    
+
+
 // const rightArea = document.querySelector('.right-area-full'),
 //     about = document.querySelector('section.about'),
 //     // skillEl = document.querySelector('h2.skill-title'),

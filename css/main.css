@@ -13,13 +13,14 @@ div.main-wrap > div.slogan p:nth-child(2) {font-weight: 500; letter-spacing: 0.1
 /* main - overview */
 div.overview {position: absolute; bottom: 0; left: 0; padding: 30px 30px; visibility: hidden; opacity: 0;}
 div.overview > p.overview-title {font-size: 14px; cursor: pointer; letter-spacing: 0.2em; padding: 10px 10px 0 0; }
+
 div.overview > div.overview-tx {border: 1px solid #999; padding: 10px; position:fixed; top: 0; left: 0;  pointer-events:none; z-index:600; transform: translate(5% ,-115%); }
 div.overview > div.overview-tx > p {font-size: 14px; line-height: 1.7em; color: #fff; letter-spacing: 0.1em; font-weight: 300;}
 div.overview > div.overview-line {border-bottom: 1px solid white; width: 0px; margin-top: 5px; transition: .2s;}
 div.overview:hover > div.overview-line {width: 85px;}
 
 /* main - copyright */
-div.main-wrap > p.copyright {font-size: 13px; color: #555; position: absolute; bottom: 0; left: 50%; transform: translate(-50%); padding-bottom: 50px; visibility: hidden; opacity: 0; }
+div.main-wrap > p.copyright {font-size: 13px; color: #555; position: absolute; bottom: 0; left: 50%; transform: translate(-50%); padding-bottom: 30px; visibility: hidden; opacity: 0; }
 
 /* main - center */
 div.center {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}

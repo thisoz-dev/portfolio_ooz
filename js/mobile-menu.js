@@ -16,12 +16,18 @@ function hamToggle(){
         mobileNav.style.top = '0';
         ishamburger = true;
         hamOpen();
+        if(isAboutOpen === true){
+            headerLogo.style.color = '#fff';
+        }
     }
     else if(ishamburger === true){
         mobileNav.style.height = '0';
         mobileNav.style.top = '-100%';
         ishamburger = false;
         hamClose();
+        if(isAboutOpen === true){
+            headerLogo.style.color = '#000';
+        }
     }
 }
 mainBtn.addEventListener('click', () => {

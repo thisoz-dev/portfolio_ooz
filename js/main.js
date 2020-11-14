@@ -175,8 +175,11 @@ contactNav.addEventListener('click', () => {
         conCloseDiv[i].style.transitionDelay = '.5s';
     }
 });
+
 /* Close */
-conClose.addEventListener('click', () => {
+conClose.addEventListener('click', conCloseClick);
+
+function conCloseClick(){
     contactPage.style.top = '50vh';
     contactPage.style.bottom = '50vh';
     contactPage.style.transition = '.5s cubic-bezier(.68,-0.04,.46,1.11)';
@@ -187,8 +190,7 @@ conClose.addEventListener('click', () => {
         conCloseDiv[i].style.transform = 'translate(-50%,-50%) rotate(0deg)';
         conCloseDiv[i].style.transition = '.3s';
     }
-});
-
+}
 
 
 /* mobile */

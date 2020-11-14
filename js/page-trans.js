@@ -9,6 +9,7 @@ const worksSection = document.querySelector('section.work');
 const divisionArea = document.querySelector('div.division-area');
 const pentaVisible = document.querySelectorAll('div.penta-visible');
 const pentaS5svg = document.querySelector('div.s5 > svg');
+const headerLogo = document.querySelector('header > h1 > a');
 
 divisionArea.style.width = '50vw';
 mainSection.style.visibility = 'visible';
@@ -16,9 +17,11 @@ aboutSection.style.visibility = 'hidden';
 worksSection.style.visibility = 'hidden';
 aboutSection.style.opacity = 0;
 aboutSection.style.transition = '.3s ease';
+LeftAreaRight = leftArea.getBoundingClientRect().right;
 
 function aboutClick(){
     isWorksOpen = false;
+    isAboutOpen = true;
     mainSection.style.visibility = 'hidden';
     mainSection.style.opacity = 0;
 
@@ -27,11 +30,24 @@ function aboutClick(){
 
     worksSection.style.visibility = 'hidden';
     worksSection.style.opacity = 0;
-    
-    divisionArea.style.width = '65vw';
+
+    LeftAreaRight = leftArea.getBoundingClientRect().right;
     divisionArea.style.backgroundColor = '#eee';
     divisionArea.style.transition = '.5s';
 
+    if(body.clientWidth >= 1024){
+        divisionArea.style.width = window.innerWidth - (LeftAreaRight + 30) + 'px';
+        resumeBtn.style.left = logoLeft + 30 + 'px';
+        headerLogo.style.color = '#fff';
+    }
+
+    if(body.clientWidth < 1024){
+        divisionArea.style.width = '100vw';
+        headerLogo.style.color = '#000';
+        resumeBtn.style.left = '4%';
+    }
+
+    conCloseClick();
     mainVisible();
     workView.style.display = 'none';
     workLiWrap.style.transition = '0';
@@ -77,7 +93,8 @@ function aboutClick(){
     penta[7].style.top = 15 + 'vh';
 }
 function worksClick(){
-    isWorksOpen = true;
+    isWorksOpen = false;
+    isAboutOpen = false;
     mainSection.style.visibility = 'hidden';
     mainSection.style.opacity = 0;
 
@@ -93,6 +110,9 @@ function worksClick(){
 
     workView.style.display = 'flex';
     
+    headerLogo.style.color = '#fff';
+
+    conCloseClick();
     mainVisible();
     // backTo();
     for(let i = 0; i < allNavBtn.length; i++){
@@ -158,6 +178,7 @@ function worksClick(){
 }
 function mainClick(){
     isWorksOpen = false;
+    isAboutOpen = false;
     mainSection.style.visibility = 'visible';
     mainSection.style.opacity = 1;
 
@@ -173,7 +194,9 @@ function mainClick(){
     
     workView.style.display = 'none';
 
+    headerLogo.style.color = '#fff';
 
+    conCloseClick();
     mainVisible();
     backTo();
     for(let i = 0; i < allNavBtn.length; i++){
