@@ -19,15 +19,14 @@ ul.otherLis {height: 32px; display:flex; flex-wrap: wrap;}
 ul.otherLis li {width: 32px;  margin-left: 10px;}
 ul.otherLis li img {width: 100%;}
 
-button.resume {background-color: var(--shape-deep-blue); border:0; width: 160px; height: 50px; border-radius: 25px; padding:4px; display: flex; align-items: center; font-size: 15px; font-weight: lighter; letter-spacing: 0.2em; cursor: pointer; outline-style: none; pointer-events: auto;
-    position: fixed; bottom: 60px; left: 4%;
+a.resume {background-color: var(--shape-deep-blue); border:0; width: 160px; height: 50px; border-radius: 25px; padding:4px; display: flex; align-items: center; font-size: 15px; font-weight: lighter; letter-spacing: 0.2em; cursor: pointer; outline-style: none; pointer-events: auto; position: fixed; bottom: 60px; left: 4%;
 }
 div.circle {background-color: #fff; width: 42px; height: 42px; border-radius: 100%; margin-right: 15px; position: relative; overflow: hidden;}
 div.download, div.check {color: var(--shape-deep-blue); line-height: 42px; font-size: 20px; position: absolute; left: 50%; transform: translateX(-50%); transition: .2s ease; }
 div.download {top: 0; }
 div.check {top: 42px; }
-button.resume:hover div.download { top: -42px;}
-button.resume:hover div.check { top: 0px;}
+a.resume:hover div.download { top: -42px;}
+a.resume:hover div.check { top: 0px;}
 
 div.about-wrap {height: 100vh; width: 100vw; display: flex; justify-content: flex-end; position: relative; }
 div.right-area {width: 65%; height:fit-content; padding-left: 4%;}

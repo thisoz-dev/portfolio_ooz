@@ -3,7 +3,7 @@
 const logo = document.querySelector('header');
 const leftArea = document.querySelector('div.left-area');
 const AboutDivisionArea = document.querySelector('.division-area');
-const resumeBtn = document.querySelector('button.resume');
+const resumeBtn = document.querySelector('a.resume');
 let logoLeft;
 let logoWidth;
 let LeftAreaRight;

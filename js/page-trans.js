@@ -37,6 +37,7 @@ function aboutClick(){
 
     if(body.clientWidth >= 1024){
         divisionArea.style.width = window.innerWidth - (LeftAreaRight + 30) + 'px';
+        resumeBtn.style.marginLeft = '0';
         resumeBtn.style.left = logoLeft + 30 + 'px';
         headerLogo.style.color = '#fff';
     }
