@@ -326,7 +326,8 @@ window.addEventListener('resize', () => {
                 discEls[j].style.transition = '.4s';
                 mDiscEls[j].style.display = 'none';
                 mDiscEls[j].style.visibl = 'visible';
-        }
+            }
+            
             console.log(idxCount);
             maskEls[idxCount].style.zIndex = 2;
             mDiscEls[idxCount].style.display = 'block';
