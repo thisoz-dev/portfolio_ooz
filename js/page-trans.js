@@ -95,7 +95,7 @@ function aboutClick(){
     penta[7].style.top = 15 + 'vh';
 }
 function worksClick(){
-    isWorksOpen = false;
+    isWorksOpen = true;
     isAboutOpen = false;
     mainSection.style.visibility = 'hidden';
     mainSection.style.opacity = 0;

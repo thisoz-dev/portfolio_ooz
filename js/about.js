@@ -23,28 +23,28 @@ if(body.clientWidth >= 1024){
         // AboutDivisionArea.style.width = window.innerWidth - (LeftAreaRight + 30) + 'px';
     })
 }
-    window.addEventListener('resize', () => {
-        console.log(isAboutOpen);
-        if(isAboutOpen === true && body.clientWidth >= 1024 ){
-            logoLeft = logo.getBoundingClientRect().x;
-            leftArea.style.marginLeft = logoLeft + 'px';
-            resumeBtn.style.left = logoLeft + 30 + 'px';
-            logoWidth = logo.getBoundingClientRect().width;
-            leftArea.style.width = logoWidth * (35 / 100) + "px";
-            headerLogo.style.color = '#fff';
+window.addEventListener('resize', () => {
+    console.log(isAboutOpen);
+    if(isAboutOpen === true && body.clientWidth >= 1024 ){
+        logoLeft = logo.getBoundingClientRect().x;
+        leftArea.style.marginLeft = logoLeft + 'px';
+        resumeBtn.style.left = logoLeft + 30 + 'px';
+        logoWidth = logo.getBoundingClientRect().width;
+        leftArea.style.width = logoWidth * (35 / 100) + "px";
+        headerLogo.style.color = '#fff';
+    
+    
+        LeftAreaRight = leftArea.getBoundingClientRect().right;
+        AboutDivisionArea.style.width = window.innerWidth - (LeftAreaRight + 30) + 'px';
         
-        
-            LeftAreaRight = leftArea.getBoundingClientRect().right;
-            AboutDivisionArea.style.width = window.innerWidth - (LeftAreaRight + 30) + 'px';
-            
-        }
-        if (isAboutOpen === true && body.clientWidth < 1024 ){
-            leftArea.style.width = "100%";
-            AboutDivisionArea.style.width = '100vw';
-            headerLogo.style.color = '#000';
-            resumeBtn.style.left = '4%';
-        }
-    });
+    }
+    if (isAboutOpen === true && body.clientWidth < 1024 ){
+        leftArea.style.width = "100%";
+        AboutDivisionArea.style.width = '100vw';
+        headerLogo.style.color = '#000';
+        resumeBtn.style.left = '4%';
+    }
+});
     
 
 

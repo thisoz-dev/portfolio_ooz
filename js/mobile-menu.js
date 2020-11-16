@@ -31,6 +31,7 @@ function hamToggle(){
     }
 }
 mainBtn.addEventListener('click', () => {
+    isWorksOpen = false;
     mainClick();
     hamClose();
     clickNav();
@@ -41,6 +42,7 @@ mAboutNav.addEventListener('click', () => {
     aboutClick();
     hamClose();
     ishamburger = false;
+    isWorksOpen = false;
     mobileNav.style.top = '-100%';
     mobileNav.style.height = '0';
     for(let i = 0; i < hamburgerEls.length; i++){
@@ -50,12 +52,15 @@ mAboutNav.addEventListener('click', () => {
 });
 
 mWorksNav.addEventListener('click', () => {
+    isWorksOpen = true;
+    console.log(isWorksOpen + ' ㅅㅂ');
     worksClick();
     hamClose();
     clickNav();
 });
 
 mHomeNav.addEventListener('click', () => {
+    isWorksOpen = false;
     mainClick();
     hamClose();
     clickNav();

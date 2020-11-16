@@ -135,7 +135,7 @@ for(let i = 0; i < mWorksList.length; i++){
     }
 
         discEls[idxCount].style.opacity = 1;
-        discEls[idxCount].style.display = 'block';
+        discEls[idxCount].style.display = 'none';
         discEls[idxCount].style.visibility = 'visible';
         discEls[idxCount].style.transition = '0';
 
@@ -165,9 +165,9 @@ function backTo() {
     discript.style.opacity = '0';
     discript.style.visibility = 'hidden';
 
-    slideArea.style.transition = '1s';
-    slideArea.style.opacity = '0';
-    slideArea.style.visibility = 'hidden';
+    // slideArea.style.transition = '1s';
+    // slideArea.style.opacity = '0';
+    // slideArea.style.visibility = 'hidden';
 
     thumb.style.left = '170%';
     thumb.style.transition = '.5s';
@@ -312,9 +312,12 @@ window.addEventListener('resize', () => {
         // 슬라이드 영역을 무조건 visible로 변경한다.
         // 반응형에는 리스트를 선택하는 중간 단계가 없으므로
         // 무조건 visible 상태로 전환한다.
-        else if(body.clientWidth <= 1024){
+        if(body.clientWidth <= 1024){
+
             slideArea.style.opacity = '1';
             slideArea.style.visibility = 'visible';
+            discript.style.opacity = 0;
+            discript.style.visibility = 'hidden';
             
             for(let j = 0; j < mWorksList.length; j++){
                 maskEls[j].style.zIndex = 0;
@@ -322,6 +325,7 @@ window.addEventListener('resize', () => {
                 // discEls[j].style.display = 'none';
                 discEls[j].style.transition = '.4s';
                 mDiscEls[j].style.display = 'none';
+                mDiscEls[j].style.visibl = 'visible';
         }
             console.log(idxCount);
             maskEls[idxCount].style.zIndex = 2;
