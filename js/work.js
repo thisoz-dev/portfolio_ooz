@@ -64,9 +64,11 @@ for(let i = 0; i < workLis.length; i++) {
         
         listOrigin[idxCount].style.color = '#2888f4';
 
+        goSiteA.setAttribute('href', worksLink[idxCount]);
         
         index.style.top = 170 * -idxCount + 'px';
         index.style.transition = '1s';
+
 
 
         workLiWrap.style.left = '8%';
@@ -113,10 +115,12 @@ for(let i = 0; i < workLis.length; i++) {
         slideIndex.style.transition = '1s';
         slideIndex.style.transitionDelay = '1s';
         slideIndex.style.visibility = 'visible';
+
+
     });
 }
 
-
+const worksLink = ['https://t0702.github.io/PUBG_renewal/', 'https://t0702.github.io/SpiderMan_web/' , 'https://t0702.github.io/MediPlus_project/', ''];
 
 for(let i = 0; i < mWorksList.length; i++){
     mWorksList[i].addEventListener('click', (e)=>{
@@ -143,6 +147,8 @@ for(let i = 0; i < mWorksList.length; i++){
 
         mDiscEls[idxCount].style.display = 'block';
         mWorksList[idxCount].style.color = '#fff';
+
+
     })
 }
 

@@ -69,7 +69,8 @@ div.number {margin-right: 30px;}
 div.social {display: flex; flex-direction: column; align-items: center; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);}
 div.social h3 {color: #000; font-size: 14px; font-weight: 600; font-family: var(--pop-font); margin-bottom: 20px;}
 div.social ul {display: flex;}
-div.social ul li {margin: 0 20px; font-weight: 400; color: #000;}
+div.social ul li {margin: 0 20px; }
+div.social ul li a {font-weight: 400; color: #000;}
 
 /* cursor */
 .cursor-circle, .cursor-dot{ position: absolute; top: 0; left: 0; transform: translate(-50%, -50%); pointer-events: none; display: none; z-index: 999;  border-radius: 100%;}
