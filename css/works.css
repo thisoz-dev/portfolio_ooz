@@ -18,7 +18,7 @@ span.back {position: absolute; font-weight: 500; top: 200px; left: 8vw; transiti
 span.back:before {content: "⬅︎";}
 span.back:hover {animation: back 1s infinite;}
 div.discript {width: 100%; bottom: 0; margin-bottom: 15vh; visibility: hidden; opacity: 0; position: relative;}
-div.discEls h4 {font-family: var(--point-font); font-size: 30px; line-height: 1.3em; color: var(--text-blue);}
+div.discEls h4 {font-family: var(--point-font); font-size: 21px; line-height: 1.3em; color: var(--text-blue);}
 div.discEls > p {font-weight: 200; line-height: 1.7em; margin: 15px 0 30px;}
 div.discEls > ul.lang {width: 100%; display: flex; justify-content: space-between; font-weight: 700;}
 div.discEls {width: 100%; position: absolute; bottom: 0; left: 0;}
@@ -53,6 +53,8 @@ div.index > ul li {font-size: 170px; font-weight: 100; line-height: 1em; font-fa
 div.index > ul li:nth-child(2) {position: absolute; top: 100%;}
 div.index > ul li:nth-child(3) {position: absolute; top: 200%;}
 div.index > ul li:nth-child(4) {position: absolute; top: 300%;}
+div.index > ul li:nth-child(5) {position: absolute; top: 400%;}
+div.index > ul li:nth-child(6) {position: absolute; top: 500%;}
 
 
 div.go-site {background-color: var(--text-blue); border-radius: 50%; width: 0; height: 0; display:flex; justify-content: center; align-items: center;  position: absolute; top: 0; right: 0;  transform: translate(50%, -50%); z-index:9;}
@@ -60,7 +62,7 @@ div.go-site:hover{animation: boing .4s cubic-bezier(.17,-0.99,.81,1.95);}
 div.go-site > a {color: var(--deep-black-bg); font-size: 30px; font-family: var(--point-font); transform: rotate(10deg); transition: .15s; opacity: 0;}
 div.go-site:hover > a {animation: boing-rotate .3s cubic-bezier(.17,-0.99,.81,1.95); animation-iteration-count:2;}
 
-div.work-control {width: 130px; height: 185px; position: absolute; top: 50%; right: 0; pointer-events: none; display: none;}
+/* div.work-control {width: 130px; height: 185px; position: absolute; top: 50%; right: 0; pointer-events: none; display: none;}
 div.up, div.down {color: #000;}
 div.selected-work {width: 100%; height: 45px; position: absolute; top: 0; right: 0; background-color: #fff; border-radius: 4px; }
 ul.select-box { width: 100%; height: 180px; position: absolute; top: 0;right: 0; background-color: rgba(255, 255, 255, 0.379); border-radius: 4px;}
@@ -69,7 +71,7 @@ ul.select-box li {height: 45px; font-weight: bold; color: #000; padding: 15px 20
 
 div.updown {position: absolute; top: 50%; right: 20px; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; font-weight: bold;}
 div.up {transform: rotate(90deg);}
-div.down {transform: rotate(90deg);}
+div.down {transform: rotate(90deg);} */
 
 @keyframes back {
     0% {transform: translateX(0px);}

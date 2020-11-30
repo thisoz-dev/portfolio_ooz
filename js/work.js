@@ -23,12 +23,20 @@ const slideIndex = document.querySelector('div.index');
 const controller = document.querySelector('.work-control');
 const index = document.querySelector('div.index ul');
 const listOrigin = document.querySelectorAll('div.list-origin');
+const worksLink = [
+    'https://t0702.github.io/PUBG_renewal/',
+    'https://t0702.github.io/SpiderMan_web/',
+    'https://t0702.github.io/MediPlus_project/',
+    'https://t0702.github.io/Remain_Re-main/main.html',
+    'https://t0702.github.io/CS_project/',
+    'https://t0702.github.io/Promo_cannondale/'
+];
 
 let count = 0;
-const selectBox = document.querySelector('.select-box');
-const selectBoxTop = selectBox.getBoundingClientRect().top;
-const selectUp = document.querySelector('div.up');
-const selectDown = document.querySelector('div.down');
+// const selectBox = document.querySelector('.select-box');
+// const selectBoxTop = selectBox.getBoundingClientRect().top;
+// const selectUp = document.querySelector('div.up');
+// const selectDown = document.querySelector('div.down');
 
 workLis = Array.prototype.slice.call(workLis);
 mWorksList = Array.prototype.slice.call(mWorksList);
@@ -120,7 +128,6 @@ for(let i = 0; i < workLis.length; i++) {
     });
 }
 
-const worksLink = ['https://t0702.github.io/PUBG_renewal/', 'https://t0702.github.io/SpiderMan_web/' , 'https://t0702.github.io/MediPlus_project/', ''];
 
 for(let i = 0; i < mWorksList.length; i++){
     mWorksList[i].addEventListener('click', (e)=>{
@@ -205,82 +212,82 @@ function backTo() {
 
 /* work list close */
 back.addEventListener('click', backTo);
-slideArea.addEventListener('mousedown', Mousedown);
+// slideArea.addEventListener('mousedown', Mousedown);
 
-/* Works Controller */
-function Mousedown(e) {
-    if(body.clientWidth > 1024){
-        slideArea.addEventListener('mouseup', Mouseup);
-        slideArea.addEventListener('mouseleave', noControlelr);
-        slideArea.addEventListener('mousemove', Mousemove);
+// /* Works Controller */
+// function Mousedown(e) {
+//     if(body.clientWidth > 1024){
+//         slideArea.addEventListener('mouseup', Mouseup);
+//         slideArea.addEventListener('mouseleave', noControlelr);
+//         slideArea.addEventListener('mousemove', Mousemove);
     
-        let mouseX = e.clientX, mouseY = e.clientY;
-        controller.style.display = 'block';
-        controller.style.top = mouseY + 'px';
-        controller.style.left = mouseX + 'px';
-        slideArea.addEventListener('mousewheel', wheel);
-    }
-}
-function Mousemove(e) {
-    let mouseX = e.clientX, mouseY = e.clientY;
-    controller.style.display = 'block';
-    controller.style.top = mouseY + 'px';
-    controller.style.left = mouseX + 'px';
-}
+//         let mouseX = e.clientX, mouseY = e.clientY;
+//         controller.style.display = 'block';
+//         controller.style.top = mouseY + 'px';
+//         controller.style.left = mouseX + 'px';
+//         slideArea.addEventListener('mousewheel', wheel);
+//     }
+// }
+// function Mousemove(e) {
+//     let mouseX = e.clientX, mouseY = e.clientY;
+//     controller.style.display = 'block';
+//     controller.style.top = mouseY + 'px';
+//     controller.style.left = mouseX + 'px';
+// }
 
-function noControlelr(){
-    controller.style.display = 'none';
-}
+// function noControlelr(){
+//     controller.style.display = 'none';
+// }
 
-function Mouseup() {
-    controller.style.display = 'none';
-    slideArea.removeEventListener('mouseup', Mouseup);
-    slideArea.removeEventListener('mousemove', Mousemove);
-    slideArea.removeEventListener('mousewheel', wheel);
-}
+// function Mouseup() {
+//     controller.style.display = 'none';
+//     slideArea.removeEventListener('mouseup', Mouseup);
+//     slideArea.removeEventListener('mousemove', Mousemove);
+//     slideArea.removeEventListener('mousewheel', wheel);
+// }
 
 
-function wheel(e){
-    console.log(e.wheelDelta);
-    if(e.wheelDelta >= 120){
-        console.log('up');
-        selectDown.style.color = '#2888f4';
-        selectUp.style.color = '#000';
-        if(count < 3){
-            count++;
-            // count = 4;
-        }
-        selectBox.style.top = selectBoxTop - (45 * count) + 'px';
-        selectBox.style.transition = 'top .3s ease';
-    } else {
-        console.log('down');
-        selectUp.style.color = '#2888f4';
-        selectDown.style.color = '#000';
-        if(count > 0 ){
-            count--;
-            // count * -1;
-        }
-        selectBox.style.top = selectBoxTop - (45 * count) + 'px';
-    }
+// function wheel(e){
+//     console.log(e.wheelDelta);
+//     if(e.wheelDelta >= 120){
+//         console.log('up');
+//         selectDown.style.color = '#2888f4';
+//         selectUp.style.color = '#000';
+//         if(count < 3){
+//             count++;
+//             // count = 4;
+//         }
+//         selectBox.style.top = selectBoxTop - (45 * count) + 'px';
+//         selectBox.style.transition = 'top .3s ease';
+//     } else {
+//         console.log('down');
+//         selectUp.style.color = '#2888f4';
+//         selectDown.style.color = '#000';
+//         if(count > 0 ){
+//             count--;
+//             // count * -1;
+//         }
+//         selectBox.style.top = selectBoxTop - (45 * count) + 'px';
+//     }
 
-    for(let j = 0; j < workLis.length; j++){
-        maskEls[j].classList.remove('toPenta');
-        maskEls[j].style.zIndex = 0;
-        discEls[j].style.opacity = 0;
-        discEls[j].style.visibility = 'hidden';
-        discEls[j].style.transition = '.4s';
-        listOrigin[j].style.color = '#fff';
-    }
-    discEls[count].style.opacity = 1;
-    discEls[count].style.visibility = 'visible';
-    discEls[count].style.transition = '.4s';
+//     for(let j = 0; j < workLis.length; j++){
+//         maskEls[j].classList.remove('toPenta');
+//         maskEls[j].style.zIndex = 0;
+//         discEls[j].style.opacity = 0;
+//         discEls[j].style.visibility = 'hidden';
+//         discEls[j].style.transition = '.4s';
+//         listOrigin[j].style.color = '#fff';
+//     }
+//     discEls[count].style.opacity = 1;
+//     discEls[count].style.visibility = 'visible';
+//     discEls[count].style.transition = '.4s';
 
-    maskEls[count].classList.add('toPenta');
-    maskEls[count].style.zIndex = 2;
+//     maskEls[count].classList.add('toPenta');
+//     maskEls[count].style.zIndex = 2;
 
-    listOrigin[count].style.color = '#2888f4';
-    index.style.top = 170 * -count + 'px';
-}
+//     listOrigin[count].style.color = '#2888f4';
+//     index.style.top = 170 * -count + 'px';
+// }
 
 
 /* Responsive 반응형 */
