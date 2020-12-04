@@ -24,12 +24,12 @@ const controller = document.querySelector('.work-control');
 const index = document.querySelector('div.index ul');
 const listOrigin = document.querySelectorAll('div.list-origin');
 const worksLink = [
-    'https://t0702.github.io/PUBG_renewal/',
-    'https://t0702.github.io/SpiderMan_web/',
+    'https://t0702.github.io/Promo_cannondale/',
+    'https://t0702.github.io/CS_project/',
     'https://t0702.github.io/MediPlus_project/',
     'https://t0702.github.io/Remain_Re-main/main.html',
-    'https://t0702.github.io/CS_project/',
-    'https://t0702.github.io/Promo_cannondale/'
+    'https://t0702.github.io/SpiderMan_web/',
+    'https://t0702.github.io/PUBG_renewal/'
 ];
 
 let count = 0;
@@ -46,6 +46,7 @@ discEls = Array.prototype.slice.call(discEls);
 console.log(workLis);
 
 let idxCount = 0;
+let beforeIdx = 0;
 
 /* Work list click */
 for(let i = 0; i < workLis.length; i++) {
@@ -53,6 +54,7 @@ for(let i = 0; i < workLis.length; i++) {
         isMain = false;
         let el = e.currentTarget, target = workLis.indexOf(el);
         idxCount = target;
+        console.log('beforeIdx', beforeIdx);
         for(let j = 0; j < workLis.length; j++){
             maskEls[j].classList.remove('toPenta');
             maskEls[j].style.zIndex = 0;
@@ -62,6 +64,7 @@ for(let i = 0; i < workLis.length; i++) {
             discEls[j].style.transition = '.4s';
             listOrigin[j].style.color = '#fff';
         }
+        maskEls[beforeIdx].style.zIndex = 1;
         discEls[idxCount].style.opacity = 1;
         discEls[idxCount].style.visibility = 'visible';
         // discEls[idxCount].style.display = 'block';
@@ -77,7 +80,7 @@ for(let i = 0; i < workLis.length; i++) {
         index.style.top = 170 * -idxCount + 'px';
         index.style.transition = '1s';
 
-
+        beforeIdx = idxCount;
 
         workLiWrap.style.left = '8%';
         // workLiWrap.style.left = discript.getBoundingClientRect().x;
