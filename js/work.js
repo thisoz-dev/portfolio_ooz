@@ -118,8 +118,8 @@ for(let i = 0; i < workLis.length; i++) {
         goSiteA.style.visibility = 'visible';
         
         back.style.opacity = 1; 
-        back.style.transition = '1s';
-        back.style.transitionDelay = '1s';
+        back.style.transition = '.3s';
+        back.style.transitionDelay = '.5s';
         back.style.visibility = 'visible';
 
         slideIndex.style.opacity = 1;
@@ -202,8 +202,7 @@ function backTo() {
     goSiteA.style.visibility = 'hidden';
     
     back.style.opacity = 0; 
-    back.style.transition = '1s';
-    back.style.transitionDelay = '1s';
+    back.style.transition = '.3s';
     back.style.visibility = 'hidden';
 
     slideIndex.style.opacity = 0;
