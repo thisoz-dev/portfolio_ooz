@@ -1,4 +1,4 @@
-section.about{display: flex; justify-content: center; overflow-y:scroll;}
+section.about{display: flex; justify-content: center; overflow-y:scroll; visibility: hidden; opacity: 0;}
 section.about::-webkit-scrollbar { display: none;}
 /* section.about{display: none;} */
 
