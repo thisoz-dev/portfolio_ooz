@@ -36,7 +36,8 @@ div.like-content {margin: 130px 0 150px; padding-right: 30px;}
 div.like-content > h2 {font-size: 50px; font-weight: 200; line-height: 1.2em; color: #000000; }
 div.prof {display:flex; align-items: flex-start; margin-top: 40px;}
 div.prof > div.img-wrap {min-width: 300px; min-height: 300px; width: 300px; height: 300px; border-radius: 5px;  overflow:hidden; 
-    /* background: url('../asset/profile-img.jpg') no-repeat center;  */ background-color: #000;
+    background: url('../asset/profile-img.jpg') no-repeat center;  
+    /* background-color: #000; */
     background-size: cover;}
 p.introduce { width: 50%; font-size: 16px; color: #000000; line-height: 1.5em;  word-break: keep-all; margin-left: 50px;}
 
