@@ -1,3 +1,5 @@
+'use strict';
+
 const about = document.querySelector('section.about');
 const hamburger = document.querySelector('div.hamburger');
 const hamburgerEls = document.querySelectorAll('div.hamburger > div');

@@ -1,3 +1,5 @@
+'use strict';
+
 const mainBtn = document.querySelector('header > h1');
 const aboutBtn = document.querySelector('li.about');
 const worksBtn = document.querySelector('li.works');
